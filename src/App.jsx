@@ -1,14 +1,15 @@
 
 import './App.css'
+import { Routes, Route } from "react-router-dom";
 
 function App() {
  
 
   return (
     <>
-<h1 className="text-3xl font-bold underline">
-    Hello world!. Installations c
- </h1>
+<section className="font-['Inter']">
+    Entregable 5
+ </section>
     </>
   )
 }
