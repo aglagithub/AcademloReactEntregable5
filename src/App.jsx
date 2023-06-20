@@ -2,7 +2,7 @@
 import './App.css'
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Pokedex from "./pages/pokedex";
+import Pokedex from "./pages/Pokedex";
 import PokemonId from "./pages/PokemonId";
 import ProtectedRoutes from "./components/auth/ProtectedRoutes";
 
@@ -13,7 +13,7 @@ function App() {
     <>
 <section className="font-['Inter']">
 {/*Routes */}
-Rutas
+Rutas e importaciones
  </section>
     </>
   )
