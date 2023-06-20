@@ -14,7 +14,7 @@ export const axiosGet = (url) => {
 
     axios.get(url)
         .then(({ data }) => {
-            console.log("Respuesta", data)
+            //console.log("Respuesta", data)
             dataReceived = data
             //setDataReceived(data)
 

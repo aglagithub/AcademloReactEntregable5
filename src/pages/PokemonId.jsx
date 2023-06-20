@@ -5,7 +5,7 @@ import axios from "axios";
 
 const PokemonId = () => {
   const [pokemon, setPokemon] = useState(null);
-  console.log("Pokemon Info:", pokemon);
+  //console.log("Pokemon Info:", pokemon);
   const { pokemonName } = useParams();
   const STAT_MAX = 255;
 
@@ -29,7 +29,7 @@ const PokemonId = () => {
     dark: "bg-gradient-to-t from-black to-[#79726B]",
     fairy: "bg-gradient-to-t from-black to-[#E8b0EB]",
     unknown: "bg-gradient-to-t from-black to-[#E0E0E0]",
-    shadow: "bg-gradient-to-t from-black to-[#C56FFFadd]",
+    shadow: "bg-gradient-to-t from-black to-[#BD3CFD]",
   };
   const pocketHorizontalLinearGradients = {
     normal: "bg-gradient-to-r from-white to-[#ACAD99]",
@@ -51,7 +51,7 @@ const PokemonId = () => {
     dark: "bg-gradient-to-r from-white to-[#79726B]",
     fairy: "bg-gradient-to-r from-white to-[#E8b0EB]",
     unknown: "bg-gradient-to-r from-white to-[#E0E0E0]",
-    shadow: "bg-gradient-to-r from-white to-[#C56FFFadd]",
+    shadow: "bg-gradient-to-r from-white to-[#BD3CFD]",
   };
   const borderColors = {
     normal: "border-[#ACAD99]",
@@ -73,7 +73,7 @@ const PokemonId = () => {
     dark: "border-[#79726B]",
     fairy: "border-[#E8b0EB]",
     unknown: "border-[#E0E0E0]",
-    shadow: "border-[#C56FFFadd]",
+    shadow: "border-[#BD3CFD]",
   };
   const textColors = {
     normal: "text-[#ACAD99]",
@@ -95,7 +95,7 @@ const PokemonId = () => {
     dark: "text-[#79726B]",
     fairy: "text-[#E8b0EB]",
     unknown: "text-[#E0E0E0]",
-    shadow: "text-[#C56FFFadd]",
+    shadow: "text-[#BD3CFD]",
   };
 
   // funcion para calcular el largo de una barra de atats
@@ -111,11 +111,11 @@ const PokemonId = () => {
     axios
       .get(url)
       .then(({ data }) => {
-        console.log("Datos pokemon particular: ", data);
+        //console.log("Datos pokemon particular: ", data);
         setPokemon(data);
       })
       .catch((err) => {
-        console.log("Error trayendo datos para pokemon particular ", err);
+        //console.log("Error trayendo datos para pokemon particular ", err);
       });
   }, []);
 

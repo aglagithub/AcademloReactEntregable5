@@ -88,7 +88,7 @@ const PokemonCard = ({ pokemonUrl }) => {
         setPokemon(data);
       })
       .catch((err) => {
-        console.log("Error trayendo datos para pokemon particular ", err);
+        //console.log("Error trayendo datos para pokemon particular ", err);
       });
   }, []);
 

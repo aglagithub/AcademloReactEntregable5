@@ -12,13 +12,13 @@ const Pokedex = () => {
   const [types, setTypes] = useState([]);
   //console.log("Tipos almacenados", types);
   const [currentType, setCurrentType] = useState("");
-  console.log("Estado currentType:", currentType);
+  //console.log("Estado currentType:", currentType);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setNamePokemon(e.target.namePokemon.value);
 
-    console.log("Pokemnon a buscar", namePokemon);
+    //console.log("Pokemnon a buscar", namePokemon);
   };
 
   const haandleChangeType = (e) => {
@@ -31,7 +31,7 @@ const Pokedex = () => {
   const pokemonsByName = pokemons.filter((pokemon) =>
     pokemon.name.includes(namePokemon.toLowerCase().trim())
   );
-  console.log("Listado pokemones que fueron encontrados:", pokemonsByName);
+  //console.log("Listado pokemones que fueron encontrados:", pokemonsByName);
 
   useEffect(() => {
     if (!currentType) {
@@ -62,14 +62,14 @@ const Pokedex = () => {
         setTypes(data.results);
       })
       .catch((err) => {
-        console.log("Error ", err);
+        //console.log("Error ", err);
       });
   }, []);
 
   // se llama cada bez que cambie le currentType
   useEffect(() => {
     if (currentType) {
-      console.log("Current type ha cambiado! a:", currentType);
+      //console.log("Current type ha cambiado! a:", currentType);
       // Llamar servicio paara traer nuevo listado filtado
       const url = `https://pokeapi.co/api/v2/type/${currentType}/`;
       axios
@@ -82,7 +82,7 @@ const Pokedex = () => {
           setPokemons(pokemonsByType);
         })
         .catch((err) => {
-          console.log("Error ", err);
+          //console.log("Error ", err);
         });
     }
   }, [currentType]);

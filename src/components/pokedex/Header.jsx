@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 const Header = () => {
   const dispatch = useDispatch();
   const handleClickLogout = () => {
-    console.log("Logging out ...");
+    //console.log("Logging out ...");
     dispatch(setNameTrainer(""));
   };
   return (
