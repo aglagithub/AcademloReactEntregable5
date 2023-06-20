@@ -8,7 +8,8 @@ function App() {
   return (
     <>
 <section className="font-['Inter']">
-    Entregable 5
+{/*Routes */}
+Rutas
  </section>
     </>
   )
