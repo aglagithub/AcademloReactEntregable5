@@ -108,7 +108,7 @@ const PokemonCard = ({ pokemonUrl }) => {
           <div className="absolute px-2 -bottom-20">
             <img
               src={pokemon?.sprites.other["official-artwork"].front_default}
-              alt={pokemon?.name}
+              alt=""
             />
           </div>
         </section>
