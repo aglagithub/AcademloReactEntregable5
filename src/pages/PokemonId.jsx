@@ -124,7 +124,7 @@ const PokemonId = () => {
     pb-3">
       <Header />
       {/* Main Container */}
-      <section className="bg-white w-[80%] mx-auto ">
+      <section className="bg-white w-[80%] mx-auto pb-3">
         <section className="border-3 border-white border-solid my">
           {/* Pokemon image */}
           <article
