@@ -121,7 +121,7 @@ const PokemonId = () => {
 
   return (
     <main className="bg-gray-200 max-w-[1040px]  mx-auto min-h-screen
-    ">
+    pb-3">
       <Header />
       {/* Main Container */}
       <section className="bg-white w-[80%] mx-auto ">

@@ -56,9 +56,9 @@ const Pokedex = () => {
   };
 
   const { pokemonInPage, lastPage, pagesInBlock } = paginationLogic();
-  console.log("Pokemons in page:", pokemonInPage);
-  console.log("Last Page: ", lastPage);
-  console.log("Pages in Block:", pagesInBlock);
+  //console.log("Pokemons in page:", pokemonInPage);
+  //console.log("Last Page: ", lastPage);
+  //console.log("Pages in Block:", pagesInBlock);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -134,6 +134,7 @@ const Pokedex = () => {
     setCurrentPage(1)
 
   },[namePokemon,currentType])
+
   // Ir a pagina anterior
   const handleClickPreviousPage = () => {
     const newCurrentPage = currentPage - 1;
