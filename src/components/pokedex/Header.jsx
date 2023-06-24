@@ -1,6 +1,7 @@
 import React from "react";
 import { setNameTrainer } from "../../store/slices/nameTrainer.slice";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -13,7 +14,9 @@ const Header = () => {
       {/*Sección roja  */}
       <div className="bg-red-600 h-20 relative">
         <div className="absolute left-3 bottom-3 w-[220px] xxs:w-[290px] sm:[400px]">
-          <img src="/images/logo.png" alt="" />
+          <Link to="/pokedex">
+            <img src="/images/logo.png" alt="" />
+          </Link>
         </div>
       </div>
       {/*Sección Negra  */}

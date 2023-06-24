@@ -120,8 +120,10 @@ const PokemonId = () => {
   }, []);
 
   return (
-    <main className="bg-gray-200 max-w-[1040px]  mx-auto min-h-screen
-    pb-3">
+    <main
+      className="bg-gray-200 max-w-[1040px]  mx-auto min-h-screen
+    pb-3"
+    >
       <Header />
       {/* Main Container */}
       <section className="bg-white w-[80%] mx-auto pb-3">
@@ -131,23 +133,29 @@ const PokemonId = () => {
             className={`mx-auto w-[98%] border-2   border-solid  rounded-md mb-2 mt-[100px]`}
           >
             <section
-              className={`relative h-[100px] mt-2 ${
+              className={`relative h-[100px] mt-2 flex flex-col items-center ${
                 pocketLinearGradients[pokemon?.types[0].type.name]
               }`}
             >
-              <div className="absolute px-2 -top-[100px] ">
-                <img
-                  className="w-[200px]"
-                  src={pokemon?.sprites.other["official-artwork"].front_default}
-                  alt={pokemon?.name}
-                />
+              <div className="absolute px-2 -top-[100px] w-[200px] ">
+                
+                  <img
+                    className=""
+                    src={
+                      pokemon?.sprites.other["official-artwork"].front_default
+                    }
+                    alt={pokemon?.name}
+                  />
+                
               </div>
             </section>
           </article>
           {/* Pokemon info detail */}
           <article className="mx-auto w-[98%] ">
             <div className="text-center text-2xl"># {pokemon?.id}</div>
-            <div className="text-center text-4xl font-bold">{pokemon?.name}</div>
+            <div className="text-center text-4xl font-bold">
+              {pokemon?.name}
+            </div>
             <div className="flex flex-row justify-center gap-4 mt-2 text-center text-sm mb-2">
               <div className="">
                 <div className="font-semibold">Weight</div>
@@ -162,16 +170,24 @@ const PokemonId = () => {
             <div className="flex flex-row justify-center gap-10 mt-2 text-center text-sm mb-3">
               <div className="flex flex-col">
                 <div className="mb-1 font-semibold">Types</div>
-                <div className="flex flex-row justify-center gap-2" >
-                  <div className="border border-solid border-black p-1">{pokemon?.types[0]?.type.name}</div>
-                  <div className="border border-solid border-black p-1">{pokemon?.types[1]?.type.name}</div>
+                <div className="flex flex-row justify-center gap-2">
+                  <div className="border border-solid border-black p-1">
+                    {pokemon?.types[0]?.type.name}
+                  </div>
+                  <div className="border border-solid border-black p-1">
+                    {pokemon?.types[1]?.type.name}
+                  </div>
                 </div>
               </div>
               <div className="flex flex-col">
-              <div className="mb-1 font-semibold">Abilities</div>
-              <div className="flex flex-row justify-center gap-2">
-                <div className="border border-solid border-gray-400 p-1">{pokemon?.abilities[0]?.ability.name}</div>
-                <div  className="border border-solid border-gray-400 p-1">{pokemon?.abilities[1]?.ability.name}</div>
+                <div className="mb-1 font-semibold">Abilities</div>
+                <div className="flex flex-row justify-center gap-2">
+                  <div className="border border-solid border-gray-400 p-1">
+                    {pokemon?.abilities[0]?.ability.name}
+                  </div>
+                  <div className="border border-solid border-gray-400 p-1">
+                    {pokemon?.abilities[1]?.ability.name}
+                  </div>
                 </div>
               </div>
             </div>

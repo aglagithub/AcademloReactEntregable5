@@ -182,7 +182,7 @@ const Pokedex = () => {
         </select>
       </form>
 
-      {/* Paginación */}
+      {/* Paginación barra superior*/}
       <ul className="flex gap-3 justify-center py-4 px-2 flex-wrap">
         <li onClick={()=> setCurrentPage(1)} className="p-3 bg-red-500 font-bold text-white rounded-md cursor-pointer text-sm ">
           {"<<"}
@@ -193,7 +193,7 @@ const Pokedex = () => {
         {pagesInBlock.map((numberPage) => (
           <li
             onClick={() => setCurrentPage(numberPage)}
-            className={`p-3 bg-red-500 font-bold text-white rounded-md cursor-pointer ${numberPage === currentPage ? "bg-red-400 text-black":"" }`}
+            className={`p-3 bg-red-500 font-bold text-white rounded-md cursor-pointer ${numberPage === currentPage && "bg-red-400 text-black" }`}
             key={numberPage}
           >
             {numberPage}
@@ -221,7 +221,7 @@ const Pokedex = () => {
         {pagesInBlock.map((numberPage) => (
           <li
             onClick={() => setCurrentPage(numberPage)}
-            className={`p-3 bg-red-500 font-bold text-white rounded-md cursor-pointer ${numberPage === currentPage ? "bg-red-400 text-black":"" }`}
+            className={`p-3 bg-red-500 font-bold text-white rounded-md cursor-pointer ${(numberPage === currentPage) && "bg-red-400 text-black"}`}
             key={numberPage}
           >
             {numberPage}
